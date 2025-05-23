@@ -1,0 +1,175 @@
+.dialer-container {
+  position: fixed; /* Allows it to float over other content */
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's above other elements */
+  color: #333;
+  cursor: default; /* Default cursor for the container */
+}
+
+.dialer-handle {
+  padding: 8px;
+  background-color: #e0e0e0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  cursor: grab; /* Grab cursor for the handle */
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.dialer-handle:active {
+  cursor: grabbing; /* Grabbing cursor when dragging */
+}
+
+.dialer-content {
+  padding: 15px;
+}
+
+.dialpad-display {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  text-align: right;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-height: 40px; /* Ensure it has some height even when empty */
+}
+
+.dialpad-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.dialpad-buttons button {
+  padding: 15px;
+  font-size: 1.2em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dialpad-buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+.dialpad-buttons button:active {
+  background-color: #e0e0e0;
+}
+
+.dialpad-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.dialpad-actions button {
+  flex-grow: 1;
+  padding: 12px 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dialpad-actions button:first-child {
+  margin-right: 5px;
+}
+.dialpad-actions button:last-child {
+  margin-left: 5px;
+}
+
+
+.call-button {
+  background-color: #28a745; /* Green */
+}
+.call-button:hover {
+  background-color: #218838;
+}
+.call-button:disabled {
+  background-color: #94d3a2;
+  cursor: not-allowed;
+}
+
+.answer-button {
+  background-color: #28a745; /* Green */
+}
+.answer-button:hover {
+  background-color: #218838;
+}
+
+
+.hangup-button {
+  background-color: #dc3545; /* Red */
+}
+.hangup-button:hover {
+  background-color: #c82333;
+}
+
+.reject-button {
+  background-color: #dc3545; /* Red */
+}
+.reject-button:hover {
+  background-color: #c82333;
+}
+
+.clear-button {
+  background-color: #ffc107; /* Yellow */
+  color: #333;
+}
+.clear-button:hover {
+  background-color: #e0a800;
+}
+
+.dialer-status {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* New styles for refined status display */
+.dialer-status-area {
+  margin-top: 10px;
+  padding: 5px;
+  border-top: 1px solid #eee; /* Optional separator */
+}
+
+.sip-status {
+  padding: 3px 6px;
+  font-size: 0.85em;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block; /* Allows it to not take full width if text is short */
+}
+
+.sip-status-registered { background-color: #4CAF50; color: white; } /* Green */
+.sip-status-registering { background-color: #FF9800; color: white; } /* Orange */
+.sip-status-unregistered { background-color: #757575; color: white; } /* Grey for explicitly unregistered */
+.sip-status-error { background-color: #f44336; color: white; } /* Red for errors */
+.sip-status-disconnected { background-color: #607D8B; color: white; } /* Blue-grey for disconnected */
+.sip-status-unknown { background-color: #9E9E9E; color: white; } /* Grey for unknown initial state */
+
+
+.call-activity-status {
+  font-size: 0.9em;
+  margin-top: 4px;
+  min-height: 1.2em; /* Reserve space even if empty */
+  color: #333;
+  text-align: center;
+}
